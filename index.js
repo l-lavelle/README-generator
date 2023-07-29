@@ -28,13 +28,9 @@ const projectQuestions = [
     {
         type:"list",
         message:"Choose which license you are using",
-        choices:["Apache License 2.0","GNU General Public License v3.0","MIT License"],
+        choices:["None","Apache 2.0","MIT"],
         name: "license"
     }
-
-
-
-
 // Add License, Contributing, Tests, and Questions, github username, email address
 // https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 ];
@@ -45,15 +41,11 @@ function writeToFile(fileName, data) {
     const {title, description,installation,usage,license}=data
     console.log(license)
 
+// adding spaces??
+    const templateliteral=
+`# ${license}
+### ${installation}`    
 
-    
-
-    // works
-    // const trial = JSON.parse(JSON.stringify(data))
-    // console.log(trial.title)
-
-
-    const templateliteral=license
     fs.writeFile(fileName,templateliteral, (err)=>
     {if (err){
         console.error(err)
@@ -66,7 +58,13 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(projectQuestions)
     .then((response)=> 
-        {writeToFile("README.md",response)});
+        {generateMd(response)}
+      )
+
+    // .then(trail=> console.log(generateMd()))
+    // var trial=generateMd(repsonse);
+    // console.log(trial)
+        // {writeToFile("README.md",generateMd())};
 }
 
 // Function call to initialize app
