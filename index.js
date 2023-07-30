@@ -30,41 +30,45 @@ const projectQuestions = [
         message:"Choose which license you are using",
         choices:["None","Apache 2.0","MIT"],
         name: "license"
+    },
+    {
+        type:"input",
+        message:"Name any contributers",
+        name:"contributers"
+    },
+    {
+        type:"input",
+        message:"Are there any tests",
+        name:"test"
+    },
+    {
+        type:"input",
+        message:"Please enter github username",
+        name:"github"
+    },
+    {
+        type:"input",
+        message:"Please enter email address",
+        name:"email"
     }
-// Add License, Contributing, Tests, and Questions, github username, email address
 // https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    // works
-    const {title, description,installation,usage,license}=data
-    console.log(license)
-
-// adding spaces??
-    const templateliteral=
-`# ${license}
-### ${installation}`    
-
-    fs.writeFile(fileName,templateliteral, (err)=>
+function writeToFile(fileName, data) {   
+    fs.writeFile(fileName,data, (err)=>
     {if (err){
         console.error(err)
     }}
     )
-
 }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(projectQuestions)
     .then((response)=> 
-        {generateMd(response)}
+        {writeToFile("README.md",generateMd(response))},
       )
-
-    // .then(trail=> console.log(generateMd()))
-    // var trial=generateMd(repsonse);
-    // console.log(trial)
-        // {writeToFile("README.md",generateMd())};
 }
 
 // Function call to initialize app
