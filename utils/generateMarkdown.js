@@ -85,7 +85,7 @@ ${renderLicenseLink(license)}
 
 ## Contributing
 ${contributers}<br />
-Websites used for refernce:<br />
+Websites used for refernce:
 ${webAddresses(websites)}
 
 ## Tests
@@ -100,6 +100,3 @@ Email: ${email}
 }
 
 module.exports = generateMarkdown;
-
-// license website: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
-// https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
