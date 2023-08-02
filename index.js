@@ -61,7 +61,7 @@ const projectQuestions = [
     },
     {
         type:"input", 
-        message:"Name any contributers that helped you collaborate on the project.",
+        message:"Name any contributers that helped you collaborate on the project. (Enter a comma between each contributor if several)",
         name:"contributers",
         validate: function(contributers){
             if (contributers.trim()===""){
@@ -73,13 +73,13 @@ const projectQuestions = [
     },
     {
         type:"input", 
-        message:"If you used any websites to help on project enter the website? (Enter a comma between each site)",
+        message:"If you used any websites to help on project enter the website? (Enter a comma between each site) If no site enter N/A.",
         name:"websites",
         validate: function(websites){
-            if (/^https?:\/\/\S+/.test(websites)){
+            if (/^https?:\/\/\S+/.test(websites) || websites==="N/A"){
                 return true
             } else{
-                return console.log("\nPlease enter website in format http(s)://")
+                return console.log("\nPlease enter website in format http(s)://. If none enter N/A.")
             }
         }
     },
@@ -140,3 +140,7 @@ function init() {
 
 // Function call to initialize app
 init();
+
+// to do: 
+// You’ll need to submit a link to the video and add it to the README of your project
+// A sample README generated using the application must be submitted

@@ -47,13 +47,31 @@ function renderLicenseSection(license) {
 
 }
 
+// function to take website string and return each site on seperate line
 function webAddresses(websites){
+  if (websites==="N/A"){
+    return ``
+  } else {
   const websiteArray = websites.split(",");
-  var allSites = ""
+  var allSites = "Websites used for reference: <br />"
   for (const website of websiteArray) {  
     allSites += `${website} <br />`
   }
   return allSites
+}}
+
+// function to take all collaboraters and return on seperate line
+function mulitContributers(contributers){
+   if (contributers==="N/A"){
+    return `N/A`
+  } else {
+  const ContibutorArray = contributers.split(",");
+  var allContibutors = "Collaboraters part of application: <br />"
+  for (const contributer of ContibutorArray) {  
+    allContibutors += ` ${contributer} <br />`
+  }
+  return allContibutors
+}
 }
 
 // TODO: Create a function to generate markdown for README
@@ -84,8 +102,7 @@ ${renderLicenseSection(license)}<br />
 ${renderLicenseLink(license)}
 
 ## Contributing
-${contributers}<br />
-Websites used for refernce:
+${mulitContributers(contributers)}<br />
 ${webAddresses(websites)}
 
 ## Tests
@@ -93,7 +110,7 @@ ${test}
 
 ## Questions
 Feel free to reach out to me with any questions via github or email!<br />
-[Github Profile](https://github.com/${github})
+[GitHub Profile](https://github.com/${github})
 
 Email: ${email}
 `;
