@@ -1,7 +1,7 @@
-# sdf
-  
+# title
+  ![License](https://img.shields.io/badge/License-MIT-blue.svg)
   ## Description
-  asf
+  description
 
   ## Table of Contents
 - [Installation](#installation)
@@ -12,24 +12,25 @@
 - [Questions](#questions)
  
 ## Installation
-asdf
+install
 
 ## Usage
-asdf
+instructions
 
 ## License 
-No license used for this project.<br />
-
+The license for this project is MIT.<br />
+    Please click the link below to view.<br />
+[MIT](https://choosealicense.com/licenses/mit/)
 
 ## Contributing
-<br />
+Collaboraters part of application: <br /> Lauren Lavelle <br />  Jim Parson <br /><br />
 
 
 ## Tests
-asdf
+tests
 
 ## Questions
 Feel free to reach out to me with any questions via github or email!<br />
-[Github Profile](https://github.com/asdf)
+[GitHub Profile](https://github.com/l-lavelle)
 
-Email: asdf@asdf.com
+Email: lauren@wmich.edu

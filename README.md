@@ -42,4 +42,4 @@ https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 Feel free to reach out to me with any questions via GitHub!<br />
 [Github Profile](https://github.com/l-lavelle)
 
-
+[Walk Thru Video Demonstration](https://drive.google.com/file/d/1R8MK2Uon8BCJZpiQjboLs3QjBi8c36FS/view)

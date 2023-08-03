@@ -7,7 +7,7 @@ const inquirer = require('inquirer');
 const projectQuestions = [
     {
         type:"input",
-        message:"What is the title of the project?",
+        message:"What is the title of the project? (Required)",
         name:"title",
         validate: function(title){
             if (title.trim()===""){
@@ -19,7 +19,7 @@ const projectQuestions = [
     },
     {
         type: "input",
-        message: "Give a brief description of your project. Include what your application does and technologies used.",
+        message: "Give a brief description of your project. Include what your application does and technologies used. (Required)",
         name: "description",
         validate: function(description){
             if (description.trim()===""){
@@ -31,7 +31,7 @@ const projectQuestions = [
     },
     {
         type:"input",
-        message:"What are the steps required to install your project? Are there any required dependencies?",
+        message:"What are the steps required to install your project? Are there any required dependencies? (Required)",
         name:"installation",
         validate: function(installation){
             if (installation.trim()===""){
@@ -43,7 +43,7 @@ const projectQuestions = [
     },
     {
         type:"input",
-        message:"Provide instructions for how to use application:",
+        message:"Provide instructions for how to use application: (Required)",
         name:"usage",
         validate: function(usage){
             if (usage.trim()===""){
@@ -61,7 +61,7 @@ const projectQuestions = [
     },
     {
         type:"input", 
-        message:"Name any contributers that helped you collaborate on the project. (Enter a comma between each contributor if several)",
+        message:"Name any contributers that helped you collaborate on the project. (Enter a comma between each contributor if several). If none enter N/A.",
         name:"contributers",
         validate: function(contributers){
             if (contributers.trim()===""){
@@ -85,7 +85,7 @@ const projectQuestions = [
     },
     {
         type:"input",
-        message:"If you wrote any tests for your application describe them",
+        message:"If you wrote any tests for your application describe them. If none enter N/A.",
         name:"test",
         validate: function(test){
             if (test.trim()===""){
@@ -97,7 +97,7 @@ const projectQuestions = [
     },
     {
         type:"input",
-        message:"Please enter your github username",
+        message:"Please enter your github username (Required)",
         name:"github",
         validate: function(github){
             if (github.trim()===""){
@@ -109,7 +109,7 @@ const projectQuestions = [
     },
     {
         type:"input",
-        message:"Please enter email address",
+        message:"Please enter email address (Required)",
         name:"email",
         validate: function(email){
             if (/\S+@\S+\.\S+/.test(email)){
@@ -141,6 +141,3 @@ function init() {
 // Function call to initialize app
 init();
 
-// to do: 
-// You’ll need to submit a link to the video and add it to the README of your project
-// A sample README generated using the application must be submitted
